@@ -3,6 +3,8 @@
 A tiny client-side preprocessor that turns terse, custom-tag markup into real
 HTML. No build step — it runs in the browser.
 
+live-preview: http://code.pulgasari.dev/tmpl/
+
 ## use it in the browser
 
 ```html
