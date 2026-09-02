@@ -5,36 +5,18 @@ HTML. No build step — it runs in the browser.
 
 ## use it in the browser
 
-Wrap your tmpl in a `<tmpl-root>` web component. It self-upgrades and renders
-itself, so there's no manual call to make. The source has to reach the runtime
-as **raw text** (the browser would otherwise parse the shorthands away), so put
-it in an inner `<script type="text/tmpl">` or load it from a file with `src`.
-
 ```html
 <script type="module" src="./lib/tmpl.js"></script>
 
 <!-- inline: works from file:// too -->
-<tmpl-root>
-  <script type="text/tmpl">
-    <tmpl tag='btn' is='button' />
-    <box.grid>
-      <card>hello</card>
-      <btn.primary 'click me' on:click={alert('moin!')} />
-    </box.grid>
-  </script>
-</tmpl-root>
+<script type='tmpl'>
+  <tmpl tag='btn' is='button' />
 
-<!-- or from a separate file (needs a server for fetch) -->
-<tmpl-root src="app.tmpl"></tmpl-root>
-```
-
-Prefer to drive it yourself? The module also exports plain functions:
-
-```js
-import { compile, render } from './lib/tmpl.js';
-
-render(source, '#app');       // compile + mount + bind events
-const html = compile(source); // -> html string
+  <box.grid>
+    <card>hello</card>
+    <btn.primary 'click me' on:click={alert('moin!')} />
+  </box.grid>
+</script>
 ```
 
 `index.html` is a full self-contained showcase (hero, components and a live
