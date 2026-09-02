@@ -12,10 +12,12 @@ HTML. No build step — it runs in the browser.
 <script type='tmpl'>
   <tmpl tag='btn' is='button' />
 
-  <box.grid>
-    <card>hello</card>
-    <btn.primary 'click me' on:click={alert('moin!')} />
-  </box.grid>
+  <#app>
+    <grid>
+      <card>hello</card>
+      <btn.primary 'click me' on:click={alert('moin!')} />
+    </grid>
+  </#app>
 </script>
 ```
 
