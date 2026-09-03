@@ -23,6 +23,7 @@
 */
 
 html, body { height: 100dvh; }
+#app > * { padding: 1rem; }
 
 
 html { scroll-behavior: smooth; }
