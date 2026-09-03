@@ -1,3 +1,7 @@
+@import url('https://code.pulgasari.dev/aufbau/css/aufbau.css');
+@import url('https://code.pulgasari.dev/aufbau/css/themes/zombie.css');
+@import url('https://code.pulgasari.dev/aufbau/css/skins/monochrome.css');
+
 :root {
   --bg:      #0b0d12;
   --bg-2:    #12151d;
