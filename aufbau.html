@@ -18,9 +18,16 @@
 <body>
 
 <script type='tmpl'>
-  <tmpl tag='btn' is='aufbau-button' />
 
-  <btn 'click me!' onclick='alert("aufbau!")' icon='fa6-solid:poo' />
+<tmpl tag='btn' is='aufbau-button' />
+
+<column#app>
+  <row#app-head></row>
+  <main#app-main>main</main>
+  <row#app-footer></row>
+</column>
+<btn 'click me!' onclick='alert("aufbau!")' icon='fa6-solid:poo' />
+  
 </script>
 
 </body>
